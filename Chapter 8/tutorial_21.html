@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Attributes and their methods</title>
+  </head>
+  <body>
+    <h1 id="firsti" class="firstc" data-game="mario" data-player="hassan">
+      Attributes Tutorial
+    </h1>
+    <script>
+      let a = document.getElementById("firsti");
+      // hasAttribute to cheak the existance of particular Attribute
+      console.log(a.hasAttribute("class"));
+
+      // get Attribute to get the value of Particular Attribute
+      console.log(a.getAttribute("id"));
+
+      // setAttribute to set value of particular Attribute
+      //   console.log(a.setAttribute("hidden", "true"));
+
+      // removeAttribute to remove particular attribute
+      console.log(a.removeAttribute("class"));
+
+      // Attribute method to cheak the existance of all attribute in element
+      console.log(a.attributes);
+
+      //Data set set method to cheak your persnol made atrribute // data- to create it
+      console.log(a.dataset);
+      console.log(a.dataset.game);
+      console.log(a.dataset.player);
+    </script>
+  </body>
+</html>

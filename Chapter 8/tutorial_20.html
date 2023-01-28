@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>innerHTML, outerHTML and other properties</title>
+  </head>
+  <body>
+    <span id="first" hidden>I am Span</span>
+    <script>
+      //Dir Tag // To See Element In Object Form
+      console.dir(document.getElementsByTagName("span")[0]);
+
+      // Node Name
+      console.log(document.body.firstChild.nodeName);
+      console.log(document.body.firstElementChild.nodeName);
+
+      //Inner Html
+      let first = document.getElementById("first");
+      first.innerHTML = "<i> Hi I am Italic </i>"; //Changing Inner Html
+
+      // Outerr Html
+      console.log(first.outerHTML);
+      first.outerHTML = "<div>Hi</div>"; // Changing Outer Html
+
+      // Text Content
+      console.log(document.body.firstChild.data); // To Getting elem Data
+      console.log(document.body.textContent); // To Get Only Text Content
+
+      //Hidden
+      first.hidden = false; // To Show Hidden Element
+    </script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript String Methods</title>
+  </head>
+  <body>
+    <script>
+      // string Methods
+      let name = "Hassan";
+      console.log(name.length); // To cheak the Length of string
+      console.log(name.toUpperCase()); // To make String UpperCase
+      console.log(name.toLocaleUpperCase("TR")); // to change lenguage
+      console.log(name.toLowerCase()); // To make String LowerCase
+      console.log(name.slice(2, 4)); // 4 is Not Included
+      console.log(name.slice(2)); // It slice 2 to last index
+      console.log(name.replace("Has", "Har")); // Top Replace String
+      let replaceAll = "Hassan is a Hassan"; // to Replace all strings
+      console.log(replaceAll.replaceAll("Hassan", "azan"));
+
+      let name2 = "      habib      ";
+      console.log(name2.trim()); // To remove Spaces In strings
+      console.log(name2.trimStart()); //To Trim start of string
+      console.log(name2.trimEnd()); //To Trim End of string
+      console.log(name.concat("is a Friend of ", name2, "Done")); //To Add 2 string
+
+      const premitive = new String("foo");
+      console.log(premitive);
+      console.log(premitive.valueOf()); // It will change Objext to premitive
+
+      const premitive2 = new String("Hassan");
+      console.log(premitive2);
+      console.log(premitive2.toString()); // Value of and to String is same
+
+      //   split() method
+      let name3 = "My Name is Hassan and My father name is gulzar";
+      let Words = name3.split(" ");
+      console.log(Words[1]);
+      let chrc = name3.split("");
+      console.log(chrc[4]);
+
+      //   search Method
+      let paragraph = "my name is Hassan and i am from faisalabad ";
+      console.log(paragraph.search("is"));
+
+      //   Repeat method
+      let repeat = "I love You ";
+      console.log(`Hassan ${repeat.repeat(5)}`);
+
+      //   match Method
+      let match = "my name is Hassan and i am from Faisalabad";
+      const regex = /[A-Z]/g;
+      const found = match.match(regex);
+      console.log(found);
+
+      //   At Method
+      let sentence2 = "My name is dubai ka prince and i am from dubai";
+      let index = "4";
+      console.log(
+        `using an index of ${index} the chracter return is ${sentence2.at(
+          index
+        )} `
+      );
+    </script>
+  </body>
+</html>

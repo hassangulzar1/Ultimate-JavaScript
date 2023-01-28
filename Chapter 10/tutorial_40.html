@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>localStorage & related methods</title>
+  </head>
+  <body>
+    <script>
+      let key = prompt("Enter Key You want to set ");
+      let value = prompt("Enter value You want to set ");
+      localStorage.setItem(key, value);
+      console.log(`the value at${key} is ${localStorage.getItem(key)}`);
+      if (key == "red" || key == "blue") {
+        localStorage.removeItem(key);
+      }
+      if (key == 0) {
+        localStorage.clear();
+      }
+      console.log(localStorage.length);
+      console.log(localStorage.key(2));
+
+      //   sessionStorage & related methods
+      // sessionStorage.getItem("name")
+      // sessionStorage.clear()
+      // sessionStorage.removeItem("name")
+      // sessionStorage.setItem("name", "harry")
+      // sessionStorage.removeItem("name")
+
+      window.onstorage = (e) => {
+        alert("changed");
+        console.log(e);
+      };
+    </script>
+  </body>
+</html>

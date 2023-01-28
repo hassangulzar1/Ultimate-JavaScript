@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Array Methods</title>
+  </head>
+  <body>
+    <script>
+      //   String Methods
+      let arr = [1, 34, 345, 345, 23];
+      let str = arr.toString(); // to convert Array to String
+      console.log(str);
+      let c = arr.join("."); // It Join Any Text To Center Of Array
+      console.log(c);
+
+      //   Pop And Push Method
+      arr.pop(); // It return pop value and Modify it
+      console.log(arr);
+      arr.push(33);
+      console.log(arr);
+
+      //   Shift and Unshift Method
+      let r = arr.shift(); // It also return Shift value
+      console.log(r, arr);
+      console.log(arr);
+      arr.unshift(122);
+      console.log(arr);
+
+      // Delete Methods
+      let num = [1, 2, 34, 54, 6, 46];
+      delete num[0]; // It cannot change the length of Array
+      console.log(num);
+
+      //   Concat Method
+      let num1 = [1, 32, 43, 456, 56];
+      let num2 = [1, 334, 44, 556, 56];
+      let num3 = [1, 32, 43, 456, 56];
+      let newString = num1.concat(num2, num3); // It Will Merge Arrays
+      console.log(newString);
+      console.log(num1);
+      console.log(num2);
+      console.log(num3);
+
+      //   Sort Method
+      let compare = (a, b) => {
+        return a - b;
+      };
+      let sort = [1, 23, 5, 44, 67, 345, 324, 234];
+      sort.sort(compare);
+      console.log(sort);
+
+      // Reverse Method
+      let reverse = [23, 34, 31, 2345, 345];
+      reverse.reverse();
+      console.log(reverse);
+
+      // Slice And Splice
+      let Numbers = [1, 234, 345, 33, 53, 634];
+      Numbers.splice(2, 3, 12341234, 3252354);
+      console.log(Numbers);
+
+      // Slice
+      let Numbers1 = [1, 234, 345, 33, 53, 634, 43];
+      //   let newNumb = Numbers1.slice(3);
+      let newNumb1 = Numbers1.slice(3, 6);
+      console.log(newNumb1);
+    </script>
+  </body>
+</html>

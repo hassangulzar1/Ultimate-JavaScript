@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 3 Practice</title>
+  </head>
+  <body>
+    <script>
+      // Q1 // Write A program to print Marks Of Students using For Loop
+      let marks = {
+        hassan: 34,
+        azan: 64,
+        habib: 34,
+        aneese: 54,
+      };
+      for (i = 0; i < Object.keys(marks).length; i++) {
+        console.log(
+          "The Marks of " +
+            Object.keys(marks)[i] +
+            "are " +
+            marks[Object.keys(marks)[i]]
+        );
+      }
+
+      // Q2 // Q1 By For In Loop
+      for (let b in marks) {
+        console.log("Marks of" + b + "are " + marks[b]);
+      }
+
+      // Q3 // add a correct Number
+      let cn = 10;
+      let i;
+      while (i != cn) {
+        console.log("try again");
+        i = prompt("enter a correct number");
+      }
+      console.log("You Have Enter a Correct Number");
+
+      // Q3 create A function to Take a mean of 4 numbers
+      const mean = (a, b, c, d) => {
+        return a + b + c + d / 2;
+      };
+      console.log(mean(4, 5, 6, 7));
+    </script>
+  </body>
+</html>

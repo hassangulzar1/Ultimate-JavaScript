@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 2 Practice</title>
+  </head>
+  <body>
+    <script>
+      // Chapter 2 PS
+
+      // Problem No 1
+      let age = prompt("Enter Your age ");
+      age = Number.parseInt(age);
+      if (age > 10 && age < 18) {
+        alert("Yes Your age is lies between 10 and 20");
+      } else {
+        alert("No Your age is not lies Between 10 and 20");
+      }
+
+      // Problem No 2
+      let bike = prompt("Enter Your Bike you need");
+      switch (bike) {
+        case "Honda70":
+          alert("Honda 70 Price is 1lac24 thousand");
+          break;
+        case "Suzuki":
+          alert("Suzuki is 1lac thousand");
+          break;
+        case "benali":
+          alert("benali is 2lac thousand");
+          break;
+        case "bmw":
+          alert("bmw is 5lac thousand");
+          break;
+
+        default:
+          alert("this bike is not Available");
+          break;
+      }
+      alert("thanks For Joining us");
+
+      // Problem No 3
+      let num = prompt("Enter Your Number");
+      num = Number.parseInt(num);
+      if (num % 2 == 0 && num % 3 == 0) {
+        alert("Yes Your Number is Divisible by 2 and 3");
+      } else {
+        alert("No Your Number is Not Divisible by 2 and 3");
+      }
+
+      // Problem No 4
+      let Number = prompt("Enter Your Number");
+      Number = Number.parseInt(Number);
+      if (num % 2 == 0 || num % 3 == 0) {
+        alert("Yes Your Number is Divisible by 2 and 3");
+      } else {
+        alert("No Your Number is Not Divisible by 2 and 3");
+      }
+
+      // Problem No 4
+      let agE = prompt("Enter Your age");
+      agE = Number.parseInt(agE);
+      console.log("You can", agE > 18 ? "Drive" : "Not Drive");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async/Await in JavaScript</title>
+  </head>
+  <body>
+    <script>
+      async function hassan() {
+        let faisalabad = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("21deg");
+          }, 2000);
+        });
+        let islamabad = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("40deg");
+          }, 5000);
+        });
+        console.log("fetching Faislabad weather please wait...");
+        let faisalabadW = await faisalabad;
+        console.log("fetched Faislabad weather: " + faisalabadW);
+        console.log("fetching Islamabad weather please wait...");
+        let islamabadW = await islamabad;
+        console.log("fetched Islamabad weather: " + islamabadW);
+        return [faisalabadW, islamabadW];
+      }
+      let harry = async () => {
+        console.log("fetching Harry");
+      };
+      let main1 = async () => {
+        let a = await hassan();
+        let b = await harry();
+        // a.then((value) => {
+        //   console.log(value);
+        // });
+      };
+      main1();
+    </script>
+  </body>
+</html>

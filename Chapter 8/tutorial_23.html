@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript: className and classList</title>
+    <style>
+      .red {
+        background-color: red;
+        color: black;
+      }
+      .yellow {
+        background-color: yellow;
+        color: black;
+      }
+      .background {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="first" class="red yellow background">
+      <span>Hey I am Good</span>
+    </div>
+
+    <script>
+      let first = document.getElementById("first");
+      first.className = "yellow red background"; // To Add Class In Element
+      console.log(first.classList);
+      first.classList.remove("red"); // Remove Class in Element
+      first.classList.add("red"); // Add Class in element
+      first.classList.toggle("red"); //toggle To add and remove class one by one
+      console.log(first.classList.contains("yellow")); //To cheak the Class is Excist or Not
+    </script>
+  </body>
+</html>

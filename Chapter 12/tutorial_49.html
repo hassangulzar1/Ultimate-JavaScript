@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring assignment and Spread Operator</title>
+  </head>
+  <body>
+    <script>
+      // Destructuring Assignment
+      let arr = [3, 4, 6, 7, 5];
+      // let [a, b, c, ...rest] = arr;
+      //   let [a, , b, ...rest] = arr;
+      let { a, b } = { a: 5, b: 7 };
+      console.log(a, b);
+
+      //   Spread Operator
+      let arr1 = [1, 2, 3];
+      let obj = { ...arr1 };
+      function sum(v1, v2, v3) {
+        return v1 + v2 + v3;
+      }
+      console.log(sum(...arr1));
+
+      // TO change One Property in Object
+      let obj1 = {
+        name: "Hassan",
+        sallery: "345",
+        adress: "XYZ",
+      };
+      console.log({ ...obj1, name: "Azan" });
+      console.log({ name: "Azan", ...obj1 }); // It will print Obj 2 Without Changing values
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice No 12</title>
+  </head>
+  <body>
+    <script>
+      //   const a = async (text) => {
+      //     return new Promise((resolve, reject) => {
+      //       setTimeout(() => {
+      //         resolve(text);
+      //       }, 2000);
+      //     });
+      //   };
+      //   (async () => {
+      //     let text = await a("Hello");
+      //     console.log(text);
+      //     let text1 = await a("world");
+      //     console.log(text1);
+      //   })();
+
+      //   Take ratio of an array element by spread synatx
+      let sum = (a, b, c) => {
+        return a + b + c;
+      };
+      let x = [3, 5, 6];
+      console.log(sum(...x));
+
+      const a = async (text, n = 2) => {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve(text);
+          }, 1000 * n);
+        });
+      };
+      (async () => {
+        let text = await a("I am resolving after 1sec", 1);
+        console.log(text);
+        let text1 = await a("I am resolving after 4sec", 4);
+        console.log(text1);
+      })();
+
+      //   Intrest Calculator
+      let simpleIntrest = (a, b, c) => {
+        return (a * b * c) / 100;
+      };
+      console.log(simpleIntrest(1000, 5, 1));
+    </script>
+  </body>
+</html>

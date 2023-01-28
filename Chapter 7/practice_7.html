@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 7 Practice</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      li {
+        margin: 12px 36px;
+        list-style-type: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact Us</li>
+      <li>About Us</li>
+    </nav>
+
+    <table>
+      <td>Hello</td>
+      <tr>
+        Hello 1
+      </tr>
+      <tr>
+        Hello 2
+      </tr>
+      <tr>
+        Hello 3
+      </tr>
+      <tr>
+        Hello 4
+      </tr>
+    </table>
+
+    <script>
+      //   let navClor =
+      //     document.body.firstElementChild.firstElementChild.firstElementChild;
+      //   navClor.style.color = "red";
+
+      document.getElementsByTagName("nav")[0].firstElementChild.style.color =
+        "green";
+      document.getElementsByTagName("nav")[0].lastElementChild.style.color =
+        "green";
+
+      //Change BackGroud Color To Cyan
+      Array.from(document.getElementsByTagName("li")).forEach((element) => {
+        element.style.background = "cyan";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritance & extends Keyword in JavaScript</title>
+  </head>
+  <body>
+    <script>
+      class Animal {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+        run() {
+          console.log(
+            `${this.name}: is Running - And ${this.name} age is :${this.age}`
+          );
+        }
+        bark() {
+          console.log(
+            `${this.name}: is barking - And ${this.name} age is :${this.age}`
+          );
+        }
+      }
+      class Monkey extends Animal {
+        eatBnana() {
+          console.log(
+            `${this.name}: is Eating bnana ${this.name} age is :${this.age}`
+          );
+        }
+      }
+      let ani = new Animal("Animal", 24);
+      let m = new Monkey("Monkey", 34);
+      ani.run();
+      m.run();
+      //ani.eatBnana();  // This will Not Working
+      m.eatBnana();
+    </script>
+  </body>
+</html>

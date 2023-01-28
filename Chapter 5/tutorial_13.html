@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map, Filter & Reduce in JavaScript</title>
+  </head>
+  <body>
+    <script>
+      // map method // It can create New array but original was not change
+      let arr1 = [12, 34, 54, 23, 25];
+      let a = arr1.map((value, index, array) => {
+        console.log(value, index, array);
+        return value + index;
+      });
+      console.log(a);
+
+      //   Filter Method //It return Values You want but original was not change
+      let arr2 = [34, 34, 21, 34523, 32, 1, 2, 3, 45];
+      let filter = arr2.filter((e) => {
+        return e < 40;
+      });
+      console.log(filter);
+
+      //   Reduse Method // can add in array and return value not new array
+      let arr3 = [3, 4, 21, 3, 3, 1];
+      arr3 = arr3.reduce((h1, h2) => {
+        return h1 + h2;
+      });
+      console.log(arr3);
+
+      //   Example // to make function in variable and after you can use it
+      let arr4 = [3, 4, 21, 3, 3, 1];
+      const reduce = (a, e) => {
+        return a + e;
+      };
+      let newarr = arr4.reduce(reduce);
+      //   console.log(newarr);
+    </script>
+  </body>
+</html>

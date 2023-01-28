@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Finally Clause</title>
+  </head>
+  <body>
+    <script>
+      const e = () => {
+        try {
+          let a = 0;
+          console.log("program ran success fully");
+          console.log(p);
+          return;
+        } catch (error) {
+          console.log(p);
+          console.log("this is an error");
+        } finally {
+          console.log("hassan is a good boy");
+          //close the file
+          //Exit the loop
+          //write to the log file
+        }
+      };
+      e();
+    </script>
+  </body>
+</html>

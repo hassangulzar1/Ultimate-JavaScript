@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch Api</title>
+  </head>
+  <body>
+    <script>
+      let p = fetch("https://goweather.herokuapp.com/weather/karachi");
+      p.then((Response) => {
+        console.log(Response.status);
+        console.log(Response.ok);
+        console.log(Response.headers);
+        // return Response.text()
+        return Response.json();
+      }).then((Response) => {
+        console.log(Response);
+      });
+    </script>
+  </body>
+</html>

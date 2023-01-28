@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 6 Practice</title>
+  </head>
+  <body>
+    <script>
+      // Q1// Take A input From User and say about The User can Drive or not
+
+      let runAgain = true;
+      const canDrive = (age) => {
+        return age >= 18 ? true : false;
+      };
+      while (runAgain) {
+        let age = prompt("Enter Your age");
+        age = Number.parseInt(age);
+        if (age < 0) {
+          console.error("Please Enter A valid Age");
+          break;
+        }
+        if (canDrive(age)) {
+          alert("yes You Can Drive");
+        } else {
+          alert("no You Not  Drive");
+        }
+        runAgain = confirm("Do You want To play again?");
+      }
+
+      //   Q3 // if user enter number greater then 4 redirect to google
+      let number = prompt("Enter a Number");
+      number = Number.parseInt(number);
+      if (number > 4) {
+        location.href = "https://google.com";
+      }
+
+      //   Q4 // Take a color throug user for change background color
+      let color = prompt("Enter BackGround color");
+      document.body.style.backgroundColor = color;
+    </script>
+  </body>
+</html>

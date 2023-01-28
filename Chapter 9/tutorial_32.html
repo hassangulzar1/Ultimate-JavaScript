@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Promise API</title>
+  </head>
+  <body>
+    <script>
+      let p1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("value 1");
+        }, 4000);
+      });
+      let p2 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          //   resolve("value 2");
+          reject(new Error("Error"));
+        }, 2000);
+      });
+      let p3 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("value 3");
+        }, 3000);
+      });
+      //   Promise.all wait for all promise to resolve and return the array of their result
+      //   let promise_all = Promise.all([p1, p2, p3]);
+
+      //Promise.allSettled wait for all the promises to settle and return their result with value and status
+      //   let promise_all = Promise.allSettled([p1, p2, p3]);
+
+      //Promise.race wait for first promise to settle and its result/error become the outer
+      // let promise_all = Promise.race([p1, p2, p3]);
+
+      //promise.any wait for the first promise to fullfill (& not rejected) it ignore reject value
+      //   let promise_all = Promise.any([p1, p2, p3]);
+
+      //   let promise_all = Promise.resolve(9);
+      let promise_all = Promise.reject(new Error("Hey i am error"));
+
+      promise_all.then((value) => {
+        console.log(value);
+      });
+    </script>
+  </body>
+</html>

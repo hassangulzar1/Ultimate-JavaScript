@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 4 Practice</title>
+  </head>
+  <body>
+    <script>
+      // Q1
+      let str = "Hassa'n";
+      console.log(str.length);
+
+      //   Q2 Include method // return True and false if value is exist or not
+      let sentence = "my name is Hassan and my father name is gulzar ";
+      let word = "my";
+      console.log(sentence.includes(word));
+      console.log(
+        `The Word ${word} ${
+          sentence.includes(word) ? "is " : "is not "
+        }in the sentence`
+      );
+      // start with and ends with
+      console.log(sentence.startsWith("my"));
+      console.log(sentence.endsWith("gulzar "));
+
+      // Q3
+      let name = "HASSAN";
+      console.log(name.toLowerCase());
+
+      //   Q4 Extract amout
+      let price = "price of pakora is Rs 1000";
+      let amount = Number.parseInt(price.slice(21));
+      console.log(amount);
+
+      //   Q4 Change 4th chracter of string
+
+      let name1 = "Hassan";
+      name1[2] = "r"; // it will not works
+      console.log(name1.replaceAll("a", "n"));
+    </script>
+  </body>
+</html>

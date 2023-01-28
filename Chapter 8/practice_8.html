@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 8 Practice</title>
+  </head>
+  <style>
+    .bulbcontainer {
+      width: 234px;
+      height: 324px;
+      background: red;
+    }
+    .bulb {
+      background: blue;
+    }
+  </style>
+  <body>
+    <button onclick="alert('Give ma a plate of Chowmen')">Chowmen</button>
+    <button onclick="alert('Give ma a plate of wada pow')">wada pow</button>
+    <button onclick="alert('Give ma a plate of wad chaoww')">
+      wada chaoww
+    </button>
+
+    <h1>Book Mark</h1>
+    <a href="https://google.com"><button id="google">Google</button></a>
+    <a href="https://facebook.com"><button id="facebook">facebook</button></a>
+    <a href="https://twitter.com"><button id="twitter">twitter</button></a>
+
+    <div id="Bulb" class="bulbcontainer bulb">hi</div>
+
+    <script>
+      document.getElementById("google").addEventListener("click", (e) => {
+        window.location = "https://google.com";
+      });
+      document.getElementById("facebook").addEventListener("click", (e) => {
+        window.location = "https://facebook.com";
+      });
+      document.getElementById("twitter").addEventListener("click", (e) => {
+        window.location = "https://twitter.com";
+      });
+
+      //   disco Bulb
+
+      setInterval(() => {
+        document.getElementById("Bulb").classList.toggle("bulb");
+      }, 300);
+    </script>
+  </body>
+</html>

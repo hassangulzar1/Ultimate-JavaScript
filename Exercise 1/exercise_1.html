@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guss The Number</title>
+  </head>
+  <body>
+    <script>
+      let num = Math.floor(Math.random() * 100);
+      let chances = 99;
+      let g;
+      do {
+        g = prompt("guess the number");
+        chances--;
+        if (g == num) {
+          console.log("the number guessed is correct");
+        } else if (g > num) {
+          console.log("the number less" + g + "and lies between 100");
+        } else if (g < num) {
+          console.log("the number is greater" + g + "and lies between 100");
+        }
+        if (chances == 99) {
+          console.log("u r chances are over the answer is" + num);
+        }
+      } while (g != num);
+      console.log(
+        "you are guess was correct the answer is =" +
+          num +
+          "and ur chances " +
+          chances
+      );
+      if (g == 99) {
+        console.log("game over try next time");
+      }
+    </script>
+  </body>
+</html>

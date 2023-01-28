@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: whitesmoke;
+  height: 100%;
+  width: 100%;
+}
+.text-container {
+  width: 60%;
+  height: 50%;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 5px;
+  /* display: flex;
+  justify-content: center; */
+}
+.input-grup {
+  margin-top: 20px;
+}
+.input-grup input {
+  margin: 0 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(106, 105, 105);
+  padding: 5px 5px;
+  width: 300px;
+}
+.input-grup input:focus {
+  border: 1px solid #fc5d35;
+  outline: none;
+}
+.input-grup textarea:focus {
+  border: 1px solid #fc5d35;
+  outline: none;
+}
+.input-grup textarea {
+  margin-top: 30px;
+  padding: 5px 5px;
+}
+.addtask {
+  margin-top: 30px;
+}
+/*! button styling  */
+.btn5 {
+  padding: 9px 40px;
+  background-color: #fc5d35;
+  color: white;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  /* letter-spacing: 1px; */
+  cursor: pointer;
+  font-size: 1rem;
+}
+.btn5:hover {
+  background-color: rgb(226, 213, 188);
+  color: black;
+  transition: 0.5s ease;
+  transform: scale(0.9);
+  font-weight: bold;
+}
+h2 {
+  text-align: center;
+}
+/*! task saving  */
+.task-saving {
+  width: 80%;
+  margin: 20px auto;
+  border: 1px solid #c0c0c0;
+  border-radius: 10px;
+  height: 100vh;
+  text-align: center;
+}
+.tasks {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 20px;
+}
+.tasks span {
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+}
+.hr1 {
+  margin: 0 10px;
+}
+/*! Buttons  */
+.secondaryBtn {
+  padding: 9px 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+.secondaryBtn:hover {
+  background-color: rgb(226, 213, 188);
+  color: black;
+  transition: 0.5s ease;
+  transform: scale(0.9);
+  font-weight: bold;
+}
+#addTodo {
+  display: flex;
+}
+#title {
+  width: 20%;
+  height: 80vh;
+}
+#location {
+  width: 20%;
+  height: 80vh;
+  margin-left: 40px;
+}
+#Description {
+  width: 30%;
+  height: 80vh;
+  margin-left: 40px;
+}
+#action {
+  margin-left: 150px;
+}

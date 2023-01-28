@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 5 Practice</title>
+  </head>
+  <body>
+    <script>
+      // Q1 // Get A value by user and add it to array
+      let arr = [1, 2, 3, 4, 5, 6, 7];
+      let input = prompt("enter a value");
+      input = Number.parseInt(input);
+      arr.push(input);
+      console.log(arr);
+
+      //   Q2 // If user add 0 the loop will end
+      let arr1 = [23, 35, 23, 234, 32];
+      let input1;
+      do {
+        input1 = prompt("Enter a value");
+        input1 = Number.parseInt(input1);
+        arr1.push(input1);
+      } while (input1 != 0);
+      console.log(arr1);
+
+      //  Q3 // Return a number Divisible by 10 by filter method
+      let arr2 = [10, 5, 20, 50, 32, 34];
+      let newarr2 = arr2.filter((e) => {
+        return e % 10 == 0;
+      });
+      console.log(newarr2);
+
+      //   Q4 // return a numbers Multiply With square by using map
+      let arr3 = [1, 2, 3, 4, 5, 6];
+      let newarr3 = arr3.map((e) => {
+        return e * e;
+      });
+      console.log(newarr3);
+
+      //  Q5// reduce method to multiply factorial
+      let arr4 = [1, 2, 3, 4, 5, 6];
+      let newarr4 = arr4.reduce((e, i) => {
+        return e * i;
+      });
+      console.log(newarr4);
+    </script>
+  </body>
+</html>

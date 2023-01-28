@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Insertion Methods</title>
+  </head>
+  <body>
+    <div class="container">
+      I am start Of this container (inner)
+      <div id="first">I am the First Element</div>
+      I am End Of this container (inner)
+    </div>
+    <script>
+      let a = document.getElementsByTagName("div")[0];
+      // Old Method
+      //   a.innerHTML = "<h1>Hello World!</h1>";
+      let div = document.createElement("div");
+      div.innerHTML = "<h1>Hello World!</h1>";
+      //Append method to create element in end of particular selected node
+      a.append(div); //Append Element at the end of node
+      a.prepend(div); //Prepend Element at the start of node
+      a.before(div); //Create Element in the before of particular element
+      a.after(div); //Create Element in the after of particular element
+      a.replaceWith(div); // replace whole element with given Element
+
+      //Much more methods
+      let begin = document.getElementById("begin");
+      begin.insertAdjacentElement("beforebegin", "<h1>beforebegin</h1>");
+      begin.insertAdjacentElement("afterbegin", "<h1>beforebegin</h1>");
+      begin.insertAdjacentElement("beforeend", "<h1>beforebegin</h1>");
+      begin.insertAdjacentElement("afterend", "<h1>beforebegin</h1>");
+    </script>
+  </body>
+</html>

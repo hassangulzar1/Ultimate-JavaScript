@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jokes</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Jokes</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container d-flex justify-content-center my-5">
+      <h2 id="Joke">"Get A Random Joke"</h2>
+    </div>
+    <div class="container d-flex justify-content-center">
+      <button
+        id="btn"
+        onclick="ranJoke()"
+        type="button"
+        class="btn btn-outline-danger"
+      >
+        JoKes
+      </button>
+    </div>
+    <script>
+      const jokes = [
+        "What’s the best thing about Switzerland?",
+        "Yesterday I saw a guy spill all his Scrabble letters on the road. I asked him, “What’s the word on the street?”",
+        `Hear about the new restaurant called Karma?`,
+        `A woman in labor suddenly shouted, “Shouldn’t! Wouldn’t! Couldn’t! Didn’t! Can’t!”`,
+        `A bear walks into a bar and says, “Give me a whiskey and … cola.”`,
+        `Did you hear about the actor who fell through the floorboards?`,
+        `Did you hear about the claustrophobic astronaut?`,
+        `Why don’t scientists trust atoms?`,
+        `Why did the chicken go to the séance?`,
+        `How do you drown a hipster?`,
+        `What sits at the bottom of the sea and twitches?`,
+        `How do you drown a hipster?`,
+        `How do you keep a bagel from getting away?`,
+        `What kind of exercise do lazy people do?`,
+        `Why don’t Calculus majors throw house parties?`,
+        `How do you make a salt?`,
+        `What does Charles Dickens keep in his spice rack?`,
+      ];
+      let h2 = document.getElementById("Joke");
+      let bTn = document.getElementById("btn");
+      const ranJoke = () => {
+        let ranDom = Math.floor(Math.random() * (jokes.length - 1));
+        let ranJoke = jokes[ranDom];
+        h2.innerHTML = ranJoke;
+      };
+    </script>
+  </body>
+</html>

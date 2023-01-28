@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Clock</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: sans-serif;
+      background: url("wallpaper-7042708_960_720.jpg");
+    }
+    h1 {
+      text-align: center;
+      background-color: #6b5e52;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+    }
+    .clock {
+      text-align: center;
+      margin-top: 100px;
+    }
+    h2 {
+      font-weight: bold;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>World Clock</h1>
+    </div>
+    <div class="clock">
+      <h2>Time is</h2>
+    </div>
+    <script>
+      let t = document.getElementsByTagName("div")[1];
+      let h1 = document.createElement("h3");
+
+      let time = (e) => {
+        let a = new Date();
+        let h = a.getHours();
+        let m = a.getMinutes();
+        let s = a.getSeconds();
+        let d = a.getDate();
+        h1.innerHTML = `${d}Day ${h}Hour ${m}minute ${s}second`;
+      };
+      setInterval(time, 1000);
+      t.append(h1);
+    </script>
+  </body>
+</html>

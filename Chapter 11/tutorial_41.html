@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Protypes and __proto__ in JavaScript</title>
+  </head>
+  <body>
+    <script>
+      let a = {
+        name2: "Hassan",
+        lenguage: "English",
+      };
+      console.log(a.__proto__);
+      let p = {
+        run: () => {
+          alert("run");
+        },
+      };
+      p.__proto__ = {
+        name: "Azan",
+      };
+      a.__proto__ = p;
+      a.run();
+      console.log(a.name);
+
+      // Example Doing By me
+      let names = {
+        name1: "azan",
+        name2: "Habib",
+        name3: "Ali",
+      };
+      let p1 = {
+        name4: "Hassan",
+      };
+      names.__proto__ = p1;
+      console.log(names.name4);
+    </script>
+  </body>
+</html>

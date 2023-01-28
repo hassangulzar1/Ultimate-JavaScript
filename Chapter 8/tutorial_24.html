@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setInterval and setTimeout in JavaScript</title>
+  </head>
+  <body>
+    <script>
+      //Set Timout is used To set a timer on particular task
+      let a = setTimeout(() => {
+        alert("I am inside Set Timout");
+      }, 5000);
+      console.log(a); // It returns valur of SetTimeoutstop timeout
+      let b = prompt("Can You Need time out ");
+      if ("n" == b) {
+        clearTimeout(a); //It is uset To remove set timeout
+      }
+
+      //Fucnction to use Settimeout
+      const sum = (a, b, c) => {
+        console.log("I am running " + (a + b + c));
+      };
+      setTimeout(sum, 3000, 10, 10, 10);
+
+      // SetInterval is used to Run program not only Once But Regularly
+      setInterval(() => {
+        alert("I am a set interval becuase i am use regularly");
+      }, 5000);
+
+      //   function To used setInterval
+      const sum1 = (a, b, c) => {
+        console.log("set interval addition is: " + (a + b + c));
+      };
+      setInterval(sum1, 3000, 10, 10, 10);
+
+      clearInterval(sum1); //To Stop SetInterval
+    </script>
+  </body>
+</html>

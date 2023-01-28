@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handling Browser Events</title>
+  </head>
+  <body>
+    <div class="container">
+      <button class="btn">Click me</button>
+    </div>
+    <script>
+      let a = document.getElementsByClassName("container")[0];
+      a.addEventListener("click", (e) => {
+        alert("hello world 1");
+      });
+      a.addEventListener("click", (e) => {
+        alert("hello world 2");
+      });
+
+      // This Will Not works
+      //   let b = prompt("Enter 1 or 2 to get Hello world 1 or 1");
+      //   if (b == "2") {
+      //     a.removeEventListener("click", (e) => {
+      //       alert("hello world 1");
+      //     });
+      //   }
+
+      //   This works To remove addEventListener
+      //   let a = document.getElementsByClassName("container")[0];
+      let x = (e) => {
+        alert("Hello World 1");
+        console.log(e);
+      };
+      let y = (e) => {
+        alert("Hello World 2");
+      };
+      a.addEventListener("click", x);
+      a.addEventListener("click", y);
+
+      //   let b = prompt("Enter 1 or 2 to get world 1 or 2");
+      if (b == "2") {
+        a.removeEventListener("click", x);
+      } else {
+        a.removeEventListener("click", y);
+      }
+
+      //Event Handler is an argument to do multiple things
+      let z = (e) => {
+        console.log(e);
+        console.log(e.target);
+        console.log(e.currentTarget);
+        console.log(e.type, e.clientX, e.clientY);
+      };
+      a.addEventListener("click", z);
+    </script>
+  </body>
+</html>

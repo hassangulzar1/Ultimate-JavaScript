@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using Loops With Arrays in JavaScript</title>
+  </head>
+  <body>
+    <script>
+      // Using For Loop To itreate In Array
+      let num = [123, 23, 43, 3, 5, 3, 34];
+      for (let i = 0; i < num.length; i++) {
+        console.log(num[i]);
+      }
+
+      //   Using For Each loop To iterate in Array
+      let num1 = [23, 43, 22, 4234, 324];
+      num1.forEach((i) => {
+        console.log(i * 2);
+      });
+
+      // Array.From method // It Convert Html Collection to An Array
+      let name = "Hassan";
+      let name1 = Array.from(name);
+      name1.forEach((e) => {
+        console.log(e);
+      });
+      //   console.log(name1);
+
+      //   For... of loop in Array
+      let numb = [23, 34, 23, 324];
+      for (let i of numb) {
+        console.log(i);
+      }
+      //   For... in loop in Array
+      let numb2 = [43, 23, 32, 434, 24];
+      for (let n in numb2) {
+        console.log(numb2[n]);
+      }
+    </script>
+  </body>
+</html>

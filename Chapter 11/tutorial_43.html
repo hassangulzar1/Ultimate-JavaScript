@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructors in JavaScript</title>
+  </head>
+  <body>
+    <script>
+      //       class Aeroplane {
+      //         constructor(givenName, planeNo) {
+      //           console.log("constructor Called " + givenName + " " + planeNo);
+      //           this.name = givenName;
+      //           this.trainno = planeNo;
+      //         }
+      //         submit() {
+      //           alert(`${this.name} :Your Form is submitted: ${this.trainno}`);
+      //         }
+      //         cancle() {
+      //           alert(`${this.name} :YOur Form is cancelled: ${this.trainno}`);
+      //         }
+      //       }
+      //       // Create & Fill A Form For Hassan
+      //       let hassanForm = new Aeroplane("Hassan", 23445);
+      //
+      //       // Create & Fill A Forms For Azan
+      //       let azanForm = new Aeroplane("azan", 343);
+      //       let azanForm1 = new Aeroplane("azan", 45645);
+      //
+      //       hassanForm.submit();
+      //       azanForm.submit();
+      //       azanForm1.submit();
+      //       azanForm.cancle();
+
+      class Aeroplane {
+        constructor(givenName, planeNo, adress) {
+          console.log(
+            "constructor Called " + givenName + " plane No " + planeNo
+          );
+          this.name = givenName;
+          this.trainno = planeNo;
+          this.adress = adress;
+        }
+        preview() {
+          alert(
+            `${this.name} :Your Form is For TrainNo: ${this.trainno} :and Your Adress is:  ${this.adress}`
+          );
+        }
+        submit() {
+          alert(
+            `${this.name} :Your Form is submitted For TrainNo: ${this.trainno}`
+          );
+        }
+        cancle() {
+          alert(
+            `${this.name} :YOur Form is cancelled For TrainNo: ${this.trainno}`
+          );
+          this.trainno = 0;
+        }
+      }
+      hassanForm = new Aeroplane(
+        "Hassan",
+        4,
+        "Faisalabad Raja Gulam Rasool nagar"
+      );
+      hassanForm.preview();
+      hassanForm.submit();
+      hassanForm.cancle();
+      hassanForm.preview();
+    </script>
+  </body>
+</html>

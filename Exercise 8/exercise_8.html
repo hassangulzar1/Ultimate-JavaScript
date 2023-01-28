@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alarm Clock</title>
+  </head>
+  <body>
+    <div id="time"></div>
+    <div id="alarm"></div>
+    <script>
+      let mPlay = () => {
+        var audio = new Audio("/music.mp3");
+        audio.play();
+      };
+      setInterval(() => {
+        let d = new Date();
+        time.innerHTML = d.toDateString();
+        +" " + d.toTimeString;
+      }, 1000);
+
+      let setAlarm = (seconds) => {
+        let d = new Date().getTime();
+        setTimeout(() => {
+          mPlay();
+        }, seconds * 1000);
+
+        setInterval(() => {
+          let leftS = -(new Date().getTime() - (d + seconds * 1000));
+          if (leftS > 0) {
+            alarm.innerHTML =
+              "Alarm ringing in " + Math.floor(leftS / 1000) + " seconds";
+          }
+        });
+      };
+      let s = prompt("Enter Time to Play alarm");
+      setAlarm(parseInt(s));
+    </script>
+  </body>
+</html>

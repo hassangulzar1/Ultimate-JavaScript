@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to Callbacks</title>
+  </head>
+  <body>
+    <script>
+      // Syncronous Programming Can Execute Lines One By One
+      //   let a = prompt("Enter Your Name");
+      //   let b = prompt("Enter Your Age");
+      //   let c = prompt("Enter Your Hair Color");
+      //   console.log("My " + a + "is my Age is " + b + "my Hair is" + c);
+
+      //  Asynchronous Programming
+      //   console.log("start");
+      //   setTimeout(() => {
+      //     console.log("HeY i Am Good");
+      //   }, 3000);
+      //   console.log("End");
+
+      // Callback Function
+      // let loadScript = (src, Callback) => {
+      //   let script = document.createElement("script");
+      //   script.src = src;
+      //   script.onload = () => {
+      //     console.log("script Loaded SRC:" + src);
+      //     Callback(src);
+      //   };
+      //   document.body.append(script);
+      // };
+      // let hello = (src) => {
+      //   alert("hello" + src);
+      // };
+      // let goodMorning = (src) => {
+      //   alert("good Morning");
+      // };
+      // loadScript(
+      //   "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js",
+      //   hello
+      // );
+
+      // Error Handling
+      let loadScript = (src, Callback) => {
+        let script = document.createElement("script");
+        script.src = src;
+        script.onload = () => {
+          console.log("script Loaded SRC:" + src);
+          Callback(null, src);
+        };
+        script.onerror = () => {
+          console.log("script Error Handling");
+          Callback(new Error("Src Got Some Error"));
+        };
+        document.body.append(script);
+      };
+      let hello = (error, src) => {
+        if (error) {
+          console.log(error);
+          return;
+        } else {
+          alert("hello" + src);
+        }
+      };
+      let goodMorning = (error, src) => {
+        if (error) {
+          console.log(error);
+          return;
+        } else {
+          alert("GoodMorning" + src);
+        }
+      };
+      loadScript(
+        "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js",
+        hello
+      );
+    </script>
+  </body>
+</html>

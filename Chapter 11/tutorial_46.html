@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Static Method in JavaScript</title>
+  </head>
+  <body>
+    <script>
+      class Animal {
+        constructor(name) {
+          this.name = Animal.captlize(name);
+        }
+        walk() {
+          alert(`Animal ${this.name} is walking`);
+        }
+        static captlize(name) {
+          return name.charAt(0).toUpperCase() + name.substr(1, name.length);
+        }
+      }
+      let j = new Animal("jack");
+      j.walk();
+    </script>
+  </body>
+</html>

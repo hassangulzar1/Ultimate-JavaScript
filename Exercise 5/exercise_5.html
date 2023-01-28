@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hacker Man</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Roboto:wght@400;500&family=Ubuntu&family=Unbounded&display=swap");
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: black;
+    }
+    body {
+      background-color: black;
+    }
+    li {
+      margin: 10px 10px;
+      font-size: 1.5rem;
+      list-style: none;
+      font-weight: bold;
+      font-family: "Unbounded", cursive;
+      color: red;
+    }
+    #hacking-container {
+      background-color: black;
+      height: 100vh;
+      margin-top: 50px;
+      text-align: center;
+    }
+    h1 {
+      color: red;
+      font-size: 2rem;
+    }
+  </style>
+  <body>
+    <header>
+      <nav>
+        <li>Warning</li>
+      </nav>
+    </header>
+    <div id="hacking-container"></div>
+    <script>
+      const warning1 = async (warn1) => {
+        setTimeout(() => {
+          let div = document.getElementById("hacking-container");
+          let warn1 = document.createElement("div");
+          warn1.innerHTML = "<h1>Initializing Hack Program...</h1>";
+          div.appendChild(warn1);
+        }, 3000);
+      };
+      const warning2 = async (warn1) => {
+        setTimeout(() => {
+          let div = document.getElementById("hacking-container");
+          let warn1 = document.createElement("div");
+          warn1.innerHTML = "<h1>Fetching Your Number...</h1>";
+          div.appendChild(warn1);
+        }, 6000);
+      };
+      const warning3 = async (warn1) => {
+        setTimeout(() => {
+          let div = document.getElementById("hacking-container");
+          let warn1 = document.createElement("div");
+          warn1.innerHTML = "<h1>Phone Number found +92 333 6693723</h1>";
+          div.appendChild(warn1);
+        }, 11000);
+      };
+      const warning4 = async (warn1) => {
+        setTimeout(() => {
+          let div = document.getElementById("hacking-container");
+          let warn1 = document.createElement("div");
+          warn1.innerHTML =
+            "<h1>Connecting to Instagram @shksheikh35.official </h1>";
+          div.appendChild(warn1);
+        }, 15000);
+      };
+      const run = async () => {
+        let warn1 = await warning1();
+        let warn2 = await warning2();
+        let warn3 = await warning3();
+        let warn4 = await warning4();
+      };
+      run();
+    </script>
+  </body>
+</html>

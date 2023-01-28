@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditional expressions in JavaScript</title>
+  </head>
+  <body>
+    <script>
+      // Else If Else Statement
+      let age = prompt("Enter Your Age");
+      age = Number.parseInt(age);
+      if (age < 0) {
+        alert("Your are Not Eligble For Driving");
+      } else if (age < 9) {
+        alert("Your are a kid not eligible For Driving");
+      } else if (age < 10 && age >= 9) {
+        alert("You have to think about driving After a Few Years");
+      } else {
+        alert("Your are Now Eligibal For Driving");
+      }
+
+      //   JavaScript Switch Statement
+      let fruits = prompt("enter Fruit Name ");
+      switch (fruits) {
+        case "Orange":
+          alert("Orange Price is 50rs per kg");
+          break;
+        case "banana":
+          alert("Banana Price is 150rs Per Kg");
+          break;
+        case "apple":
+          alert("Apple Price is 200rs Per Kg");
+          break;
+        case "anar":
+          alert("anar Price is 500 rs ");
+          break;
+
+        default:
+          alert("this Product Not available");
+          break;
+      }
+
+      //   Ternory Operator
+      console.log("Your can", age < 18 ? "Not Drive" : "Drive");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Element only Navigation</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    ul {
+      display: flex;
+      margin: 10px 10px;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      margin: 0px 23px;
+    }
+  </style>
+  <body>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Contact us</li>
+      </ul>
+    </nav>
+    <div class="container">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
+        dolore. Consectetur nobis at dolorum officiis suscipit iusto impedit
+        fugit vel ab fugiat consequuntur obcaecati molestias corrupti id quas et
+        quaerat similique, placeat cupiditate culpa!
+      </p>
+    </div>
+
+    <script>
+      //   const changeBgColor = () => {
+      //     document.body.firstElementChild.style.background = "red";
+      //   };
+
+      let b = document.body.firstElementChild.nextElementSibling;
+      console.log(b);
+    </script>
+  </body>
+</html>

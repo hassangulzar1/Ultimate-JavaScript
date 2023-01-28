@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classes and Objects in JavaScript</title>
+  </head>
+  <body>
+    <script>
+      class Aeroplane {
+        submit() {
+          alert(`${this.name} :Your Form is submitted: ${this.trainno}`);
+        }
+        cancle() {
+          alert(`${this.name} :YOur Form is cancelled: ${this.trainno}`);
+        }
+        fill(givenName, planeNo) {
+          this.name = givenName;
+          this.trainno = planeNo;
+        }
+      }
+      //   Create A Form For Hassan
+      let hassanForm = new Aeroplane();
+      //Fill The Form with Hassan Details
+      hassanForm.fill("Hassan", 2342);
+
+      //   Create A Forms For Azan
+      let azanForm = new Aeroplane();
+      let azanForm1 = new Aeroplane();
+      //Fill The Forms with Azan Details
+      azanForm.fill("azan", 2566);
+      azanForm1.fill("azan", 45345);
+
+      hassanForm.submit();
+      azanForm.submit();
+      azanForm1.submit();
+      azanForm.cancle();
+    </script>
+  </body>
+</html>

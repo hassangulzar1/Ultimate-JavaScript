@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake water and Gun</title>
+  </head>
+  <body>
+    <script>
+      let person = 0;
+      let system = 0;
+
+      for (let i = 0; i < 3; i++) {
+        const computer = ["snake", "water", "gun"];
+        let ChooseRandom =
+          computer[Math.floor(Math.random() * computer.length)];
+        let user = prompt("snake water & gun");
+        if (ChooseRandom == "gun" && user == "snake") {
+          alert("You Lost The challange");
+          system++;
+        } else if (ChooseRandom == "snake" && user == "water") {
+          alert("YOu lost");
+          system++;
+        } else if (ChooseRandom == "water" && user == "gun") {
+          alert("You Lost The challange");
+          system++;
+        } else if (ChooseRandom == "gun" && user == "water") {
+          alert("You Win");
+          person++;
+        } else if (ChooseRandom == "water" && user == "snake") {
+          alert("You Win ");
+          person++;
+        } else if (ChooseRandom == "snake" && user == "gun") {
+          alert("You Win The Challange");
+          person++;
+        } else {
+          alert("Draw Try Again");
+        }
+      }
+      alert("PERSON WIN:- " + person);
+      alert("COMPUTER WIN:- " + system);
+      if (person == system) {
+        alert("match Draw");
+      }
+      if (person > system) {
+        alert("Congradulation You win");
+      }
+      if (person < system) {
+        alert("You lost");
+      }
+
+      // One More Method to Do'it
+
+      let user = prompt("Enter S, W or G");
+      let cpuI = Math.floor(Math.random() * 3);
+      let cpu = ["S", "W", "G"][cpuI];
+
+      const match = (cpu, user) => {
+        if (cpu === user) {
+          return "Nobody";
+        } else if (cpu === "S" && user === "W") {
+          return "cpu";
+        } else if (cpu === "S" && user === "G") {
+          return "user";
+        } else if (cpu === "G" && user === "W") {
+          return "user";
+        } else if (cpu === "G" && user === "S") {
+          return "cpu";
+        } else if (cpu === "W" && user === "S") {
+          return "user";
+        } else if (cpu === "W" && user === "G") {
+          return "cpu";
+        }
+      };
+      let result = match(cpu, user);
+      document.write(
+        `CPU:${cpu} <br> User:${user} <br>The winner is: ${result.toUpperCase()}`
+      );
+    </script>
+  </body>
+</html>
